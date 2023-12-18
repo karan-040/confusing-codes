@@ -1,5 +1,5 @@
 var map = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];//to know wether a box is empty or not
-var color_picker = ["","#E7BCDE","#D80032","#54B435","#FF8400","#781C68","#A10035","#1A5D1A","#F4CE14","#D83F31","#3E001F","#B0578D","#C70039","#D2DE32","#94A684","#40F8FF"];
+var color_picker = ["","#E7BCDE","#D80032","#54B435","#FF8400","#781C68","#A10035","#1A5D1A","#F4CE14","#D83F31","#3E001F","#5C8374","#3E001F","#D864A9","#FF0060","#125B50"];
 
 
 
@@ -180,7 +180,7 @@ function right_shifter(row){
         var kalar =  $(currbox).css('background-color');
         var currtext = ".row-"+row+"-"+2+">h4";
         var nexttext = ".row-"+row+"-"+3+">h4";
-        $(nextbox).css("background-color",kalar);
+        
         $(currbox).css('background-color',"transparent");
         var txtvalue = $(currtext).text();
         $(nexttext).text(txtvalue);
