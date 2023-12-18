@@ -1,5 +1,5 @@
 var map = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];//to know wether a box is empty or not
-var color_picker = ["","#E7BCDE","#FF90BC","#5F6F52","#6B240C","#FF8F8F","#AF2655","#557C55","#FF6C22","#0174BE","#008170","#B0578D","#C70039","#D2DE32","#94A684","#40F8FF"];
+var color_picker = ["","#E7BCDE","#D80032","#54B435","#FF8400","#781C68","#A10035","#1A5D1A","#F4CE14","#D83F31","#3E001F","#B0578D","#C70039","#D2DE32","#94A684","#40F8FF"];
 
 
 
@@ -90,7 +90,7 @@ function random_generator(){
         }
         // now i and j are the indices of a empty box
         var s = ".row-"+i+"-"+j;
-        $(s).css('background-color',"#4CB9E7");
+        $(s).css('background-color',"#113946");
         var t = ".row-"+i+"-"+j+">h4";
         $(t).text("2");
         map[i][j]=1;
@@ -184,7 +184,6 @@ function right_shifter(row){
         $(currbox).css('background-color',"transparent");
         var txtvalue = $(currtext).text();
         $(nexttext).text(txtvalue);
-        $(currtext).text("");
         map[row][3]=1;
         map[row][2]=0;
         movement=true;
@@ -203,7 +202,6 @@ function right_shifter(row){
             $(nextbox).css('background-color',kalar);
             $(currbox).css('background-color',"transparent");
             $(nexttext).text(sum);
-            $(currtext).text("");
             map[row][3]=1;
             map[row][2]=0;
             score_updater(sum);
