@@ -180,9 +180,10 @@ function right_shifter(row){
         var kalar =  $(currbox).css('background-color');
         var currtext = ".row-"+row+"-"+2+">h4";
         var nexttext = ".row-"+row+"-"+3+">h4";
-        
+        $(nextbox).css('background-color',kalar);
         $(currbox).css('background-color',"transparent");
         var txtvalue = $(currtext).text();
+        $(currtext).text("");
         $(nexttext).text(txtvalue);
         map[row][3]=1;
         map[row][2]=0;
@@ -202,6 +203,7 @@ function right_shifter(row){
             $(nextbox).css('background-color',kalar);
             $(currbox).css('background-color',"transparent");
             $(nexttext).text(sum);
+            $(currtext).text("");
             map[row][3]=1;
             map[row][2]=0;
             score_updater(sum);
